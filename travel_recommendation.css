@@ -1,0 +1,469 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Change this */
+    background: linear-gradient(to right, #0d1d1f, #2c3e3a, #3f544f);
+    padding: 15px 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    height: 60px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    font-style: italic;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Move it back by half its width */
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1db0a0;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    width: 400px;
+    justify-content: space-between;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 14px;
+    flex-grow: 1;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.search-box button {
+    border: none;
+    padding: 8px 12px;
+    background-color: #1db0a0;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.clear-btn {
+    background-color: #0a7c6b;
+}
+
+.search-box button:hover {
+    background-color: #158f86;
+}
+
+
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen */
+    background: url('background.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 80px;
+    color: white;
+}
+
+/* Add a semi-transparent gradient overlay */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Covers the left half of the screen */
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Dark to transparent */
+    z-index: 1;
+}
+
+/* Ensure the content is above the overlay */
+.hero-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 2; /* Places text above the overlay */
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+.book-now-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1db0a0;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.book-now-btn:hover {
+    background-color: #158f86;
+}
+
+
+
+
+/* Sidebar Container */
+.sidebar {
+    position: absolute;
+    top: 20%; /* Adjust this if needed */
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+}
+
+/* Sidebar Line */
+.sidebar-line {
+    width: 2px;
+    height: 160px; /* Adjust height of the line */
+    background-color: rgba(255, 255, 255, 0.6); /* Light transparent color */
+    margin-bottom: 80px; /* Increased space between bar and icons */
+}
+
+/* Social Media Sidebar */
+.social-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between icons */
+}
+
+/* Icon Styling */
+.social-sidebar a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-sidebar a:hover {
+    color: #1db0a0;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+/* Combined About Us & Team Section */
+.about-team {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 60px 10%;
+    background: url('background.jpg') no-repeat center center/cover;
+}
+
+/* Dark overlay to improve text visibility */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adjust transparency */
+    z-index: 1;
+}
+
+/* Ensure content appears above the overlay */
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+.content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Our Team Styling */
+.content h2 {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+/* Team Members Grid */
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.team-member {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.role-btn {
+    padding: 8px 15px;
+    background-color: #1db0a0;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.role-btn:hover {
+    background-color: #158f86;
+}
+
+
+
+
+
+
+
+/* ✅ Contact Section Layout */
+.contact-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    height: 100vh;
+    background: url('background.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;  /* Covers the left half */
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent); 
+    z-index: 1;
+}
+
+/* ✅ Move "Contact Us" Text to the Left */
+.contact-text {
+    flex: 1;
+    color: white;
+    z-index: 2;
+}
+
+.contact-text h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.contact-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ✅ Contact Form (Right Alignment) */
+.contact-form {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+/* ✅ Form Styling */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.submit-btn {
+    margin-top: 15px;
+    padding: 12px;
+    background: #1db0a0;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #158f86;
+}
+
+
+
+
+
+
+
+
+/* Right-side container */
+#recommendations-container {
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    width: 350px;
+    height: 80vh;
+    overflow-y: auto;
+    background: transparent; /* Set background to transparent */
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.recommendation-card {
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency for better visibility */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    backdrop-filter: blur(10px); /* Optional: Adds a glassmorphism effect */
+    color: white;
+    text-align: center;
+}
+
+
+.recommendation-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.recommendation-card .info {
+    padding: 10px;
+    text-align: center;
+}
+
+.visit-btn {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
